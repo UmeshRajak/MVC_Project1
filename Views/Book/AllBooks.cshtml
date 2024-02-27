@@ -1,0 +1,34 @@
+﻿@using MVC_Project1.Models;
+@model IEnumerable<BookModel>
+@{
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h3 class="display-4">All Books</h3>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placholder-img card-img-top bg-dark" width="100%" height="225" xmlns="www.w3.org/2000/svg"></svg>
+                    <div class="card-body">
+                        <h3 class="card-title">@item.Title</h3>
+                        <p class="card-text">@item.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="/Book/OneBook/@item.id" class="btn btn-sm btn-outline-secondary">View Details</a>
+                            </div>
+                            <small class="text-muted">@item.Author</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
