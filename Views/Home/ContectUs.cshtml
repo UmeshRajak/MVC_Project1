@@ -1,8 +1,20 @@
 ﻿
-@{
+@*@{
     ViewData["Title"] = "ContectUs";
+}*@
+@{ 
+    var bookinfo = ViewData["book"] as BookModel;
 }
 
 <h1>@ViewData["Title"]</h1>
 <p>This is Contect Us page</p>
+<p>view bag :-
+    id=@ViewBag.some.id;<br />
+    Author=@ViewBag.some.Author;
+    
+</p>
+<p>view data:-
+    Id = @bookinfo.id;<br />
+    Author=@bookinfo.Author;
+</p>
 

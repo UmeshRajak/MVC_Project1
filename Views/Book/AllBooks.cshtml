@@ -1,8 +1,9 @@
-﻿@using MVC_Project1.Models;
-@model IEnumerable<BookModel>
+﻿@model IEnumerable<BookModel>
+
 @{
-    Layout = "_Layout";
+    ViewData["Title"] = "All Books";
 }
+
 
 <div class="container">
     <h3 class="display-4">All Books</h3>
@@ -17,9 +18,15 @@
                         <p class="card-text">@item.Description</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a href="/Book/OneBook/@item.id" class="btn btn-sm btn-outline-secondary">View Details</a>
+                                                    
+                                <a asp-controller="Book" asp-action="FindBook" asp-route-title="@item.Title" asp-route-authorName="@item.Author">FindBook</a>
                             </div>
                             <small class="text-muted">@item.Author</small>
+                            
+                            <div class="btn-group">
+                                
+                                <a asp-controller="Book" asp-action="OneBook" asp-route-id="@item.id">View Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>

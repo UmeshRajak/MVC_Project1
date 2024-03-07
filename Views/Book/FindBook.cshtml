@@ -1,7 +1,89 @@
 ﻿
-@{
-    ViewData["Title"] = "FindBook";
-}
+@model BookModel
+@*@{
+    ViewData["Title"] = "Book " + Model.Title;
+}*@
 
-<h1>FindBook</h1>
+<h3 class="display-4">This Book is here</h3>
 
+@*<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="~/Images/book1.webp" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="bg-dark">@Model.Rating</h5>
+                            <p class="bg-dark">@Model.Opinion</p>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.id</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.Title</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-primary">
+                    <span class="label label-primary">By:</span>
+                    <span class="monospaced">@Model.Author</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-primary">
+                    <p class="description">
+                        @Model.Description
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <button class="btn btn-outline-primary">
+                        Read now
+                    </button>
+                </div>
+            </div>
+
+            <hr />
+
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Category -</span>@Model.Category</li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Total Pages -</span>@Model.TotalPages</li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Language -</span>@Model.Language</li>
+            </ul>
+        </div>
+
+    </div>
+</div>*@

@@ -1,6 +1,18 @@
-﻿@{
+﻿@*@{
     ViewData["Title"] = "AboutUs";
+}*@
+
+@{
+    dynamic data = ViewBag.some;
 }
+
+
 <h1>@ViewData["Title"]</h1>
 
 <h2>this View for About Us</h2>
+
+<p>@ViewBag.N</p>
+<p class="lead" text-muted>Use ExpandoObject:-<br />
+    Id= @data.id <br />
+   Author= @data.name  
+</p>

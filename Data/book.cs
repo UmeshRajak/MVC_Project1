@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MVC_Project1.Models
+namespace MVC_Project1.Data
 {
-    public class BookModel
+    public class book
     {
         public int id { get; set; }
         public string Title { get; set; }
@@ -15,11 +15,11 @@ namespace MVC_Project1.Models
 
         public string Category { get; set; }
         public string Language { get; set; }
-        public int TotalPages { get; set; }
-
+        public int? TotalPages { get; set; }
         public string Rating { get; set; }
-
         public string Opinion { get; set; }
 
+        public DateTime? CreatedOn { get; set; }
+        public DateTime? UpdatedOn { get; set; }
     }
 }
